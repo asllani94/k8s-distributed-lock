@@ -79,13 +79,12 @@ public class DistributedLockAutoConfiguration {
         logger.info("Connecting to Kubernetes API at: {}", basePath);
 
         // Create client with service account token
-        ApiClient client = new ClientBuilder()
+
+        return new ClientBuilder()
                 .setBasePath(basePath)
                 .setVerifyingSsl(true)
                 .setCertificateAuthority(Files.readAllBytes(Paths.get(SERVICE_ACCOUNT_CA_PATH)))
                 .setAuthentication(new AccessTokenAuthentication(token))
                 .build();
-
-        return client;
     }
 }
