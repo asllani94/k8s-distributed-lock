@@ -1,4 +1,7 @@
 # Kubernetes Distributed Lock - Spring Boot Starter
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Java](https://img.shields.io/badge/Java-17+-orange.svg)](https://www.oracle.com/java/)
+[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.5.0-brightgreen.svg)](https://spring.io/projects/spring-boot)
 
 A Spring Boot 3.5.x starter for distributed locking using Kubernetes Lease API. Enables coordination between multiple pod instances in a Kubernetes cluster without external dependencies like Redis or Zookeeper.
 
