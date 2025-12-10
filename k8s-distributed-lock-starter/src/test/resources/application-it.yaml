@@ -1,0 +1,13 @@
+# Integration Test Configuration
+# This profile is used when running integration tests against a real Kubernetes cluster
+
+# Kubernetes Configuration
+kubernetes.namespace=default
+  
+  # Distributed Lock Configuration (shorter durations for faster tests)
+kubernetes.lock.lease-duration-seconds=15
+kubernetes.lock.renew-interval-seconds=5
+  
+  # Logging (optional - helps debug test issues)
+logging.level.io.github.asllani94.k8s.lock=DEBUG
+logging.level.io.kubernetes.client=INFO

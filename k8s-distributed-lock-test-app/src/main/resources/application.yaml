@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: k8s-distributed-lock-test-app
+
+server:
+  port: 8080
+
+k8s:
+  distributed-lock:
+    enabled: true
+    namespace: default
+    lock:
+      lease-duration-seconds: 30
+      renew-interval-seconds: 10
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: always
+
+logging:
+  level:
+    io.github.asllani94.k8s.lock: DEBUG
+    io.kubernetes.client: INFO

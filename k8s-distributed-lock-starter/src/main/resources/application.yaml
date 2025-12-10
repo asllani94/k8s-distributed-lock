@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: k8s-distributed-lock-starter
+
+k8s:
+  distributed-lock:
+    enabled: true
+    namespace: default
+    lock:
+      lease-duration-seconds: 30
+      renew-interval-seconds: 10
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: always

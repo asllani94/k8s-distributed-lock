@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.5.0</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>io.github.asllani94</groupId>
+    <artifactId>k8s-distributed-lock-parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>Kubernetes Distributed Lock Parent</name>
+    <description>Parent project for Kubernetes distributed locking using Lease API</description>
+
+    <url>https://github.com/asllani94/k8s-distributed-lock</url>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>asllani94</id>
+            <name>Arnold Asllani</name>
+            <url>https://github.com/asllani94</url>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/asllani94/k8s-distributed-lock.git</connection>
+        <developerConnection>scm:git:ssh://github.com:asllani94/k8s-distributed-lock.git</developerConnection>
+        <url>https://github.com/asllani94/k8s-distributed-lock</url>
+    </scm>
+
+    <properties>
+        <java.version>17</java.version>
+        <kubernetes-client.version>25.0.0</kubernetes-client.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <modules>
+        <module>k8s-distributed-lock-starter</module>
+        <module>k8s-distributed-lock-test-app</module>
+    </modules>
+
+</project>
